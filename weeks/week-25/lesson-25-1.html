@@ -65,9 +65,49 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .term-audio:hover { background: #FDF3E3; }
 
 .term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+/* ===== Optima widgets (inline, ungraded practice) ===== */
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 16px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8a6216; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options button { flex: 1 1 110px; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 14px 18px; cursor: pointer; text-align: center; margin-bottom: 10px; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; font-size: 15px; line-height: 1.55; }
+.ow-flip .ow-flip-front { font-size: 17px; color: #0E1C42; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.sort-bins { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 4px; }
+.sort-bin { flex: 1 1 140px; background: #FFFFFF; border: 1.5px dashed #A9BBD1; border-radius: 8px; padding: 8px 10px; min-height: 56px; }
+.sort-bin h4 { margin: 0 0 6px 0; font-size: 13px; color: #1B6A94; }
+.sort-chip { font-size: 13px; background: #D8F0DD; border: 1px solid #2A9D5C; color: #1A6B3D; border-radius: 6px; padding: 4px 8px; margin: 4px 0; line-height: 1.4; }
+.sort-tally { font-size: 12px; color: #6b7a99; margin: 4px 0 2px; }
+.order-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.order-pool button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 12px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+.order-pool button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.order-pool button.nope { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.order-list { margin: 0 0 8px 0; padding: 0; list-style: none; }
+.order-list li { background: #D8F0DD; border: 1px solid #2A9D5C; color: #1A6B3D; border-radius: 6px; padding: 7px 10px; margin-bottom: 6px; font-size: 14px; line-height: 1.4; }
+.order-list li b { margin-right: 6px; }
+details.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; }
+details.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+details.ow-reveal .reveal-body { margin-top: 10px; padding: 10px 12px; background: #FDF3E3; border-left: 3px solid #C7922C; border-radius: 4px; font-size: 15px; line-height: 1.55; color: #1a2340; }
 </style>
 </head>
-<body data-lesson-id="3.2" data-week="25">
+<body data-lesson-id="3.2" data-week="25" data-widgets="4">
 
 <div class="oa-header">
   <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
@@ -325,6 +365,7 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Jefferson&rsquo;s generation hoped that slavery would fade away. Tobacco farming, which had made slavery pay in Virginia, was wearing out the soil. For a few years it looked as if the hope might come true. Then a new crop changed everything. This lesson explains how cotton gave slavery a new life, and what that meant for slave families.</p>
 </div>
 <div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+<div class="optima-widget ow-reflect"><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Imagine a new machine saves a lot of work at one step of making a product. Would that mean fewer workers are needed? (No wrong answer.)</div><div class="widget-options"><button type="button" data-response="That is what many people would expect. Keep your guess in mind as you read what happened when a labor-saving machine reached the cotton fields.">Yes, fewer workers</button><button type="button" data-response="Keep your guess in mind as you read what happened when a labor-saving machine reached the cotton fields.">No, it could even mean more</button><button type="button" data-response="Good thinking. Keep your guess in mind as you read what happened when a labor-saving machine reached the cotton fields.">It depends on the other steps</button></div><div class="widget-feedback" data-ra-skip></div><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">A Machine That Changed Everything</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Cotton was hard to prepare. The fibers stick tightly to small, sticky seeds, and a worker could clean only about a pound a day by hand. In 1793 Eli Whitney, a young New Englander visiting a Georgia plantation, built a machine that did the job much faster. He patented it the next year. The <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="A machine that quickly separates cotton fibers from the sticky seeds."><b>cotton gin</b></span> could clean fifty times as much cotton as a hand worker.</p>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">You might expect that a labor-saving machine would reduce the need for workers. In this case it did the opposite. The gin cleaned the cotton, but people still had to plant it, hoe it, and pick it, and that work was done by hand. Suddenly every acre of cotton earned a large profit, so planters wanted more land and more slave workers. The technology made slavery more valuable than before.</p>
@@ -335,15 +376,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">The Second Middle Passage</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Congress banned the import of slaves from Africa in 1808, as the Constitution allowed. But demand for workers in the new cotton lands was growing, and Virginia and Maryland had more slaves than their farms needed. So a huge <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="The buying and selling of slaves inside the United States."><b>domestic slave trade</b></span> grew up. Between 1790 and 1860, about a million slaves were sold or moved from the Upper South to the Deep South. Some walked in chained lines, called coffles. Others traveled by ship to New Orleans.</p>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">This forced migration split up many families. Husbands were sold away from wives and children from parents. Slave markets in cities like Richmond and New Orleans were busy places. One free-born New Yorker, Solomon Northup, was kidnapped in 1841 and sold into slavery in Louisiana. He spent twelve years there before he was freed, and he wrote about it afterward.</p>
+<div class="optima-widget ow-order" data-config="{&quot;items&quot;: [&quot;The South grows about three thousand bales of cotton (1790)&quot;, &quot;Eli Whitney builds the cotton gin (1793)&quot;, &quot;Congress bans the import of slaves from Africa (1808)&quot;, &quot;Solomon Northup is kidnapped and sold into slavery in Louisiana (1841)&quot;, &quot;The South grows more than four million bales (1860)&quot;], &quot;hint&quot;: &quot;That event came later. Which one had to happen first?&quot;, &quot;done&quot;: &quot;Right. Cotton grew from a small crop into the nation&#x27;s biggest export.&quot;}"><div class="widget-kicker">&#9889; PUT IT IN ORDER &middot; COTTON TIMELINE</div><div class="widget-question">Tap the events in the order they happened, earliest first.</div><div class="ow-body"></div><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">Life on the Plantation</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">On large cotton plantations, slaves worked from sunup to sundown, often in gangs directed by an overseer. The work was harsh, and punishment by whipping was common. They lived in small cabins, and many had too little food and clothing. The law gave them almost no rights. They could not testify against white people, and their marriages were not legally recognized.</p>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Even so, slaves built a culture of their own. Families and kin networks were fiercely loved and protected. Many held their own worship, in secret if they had to, away from the overseer. Religion gave them hope. They made <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="Religious songs created by African American slaves. Many carried hidden messages of hope and freedom."><b>spirituals</b></span>, songs of faith, sorrow, and freedom. Some songs also carried hidden messages. Stories, music, and cooking from Africa blended with American life.</p>
+<div class="optima-widget ow-sort" data-config="{&quot;bins&quot;: [&quot;A gain from cotton&quot;, &quot;A cost of cotton&quot;], &quot;items&quot;: [{&quot;t&quot;: &quot;Cotton became the nation&#x27;s biggest export&quot;, &quot;b&quot;: 0, &quot;fb&quot;: &quot;Right. It often made up half or more of everything the country sold abroad.&quot;, &quot;hint&quot;: &quot;Ask whether this brought wealth or hardship.&quot;}, {&quot;t&quot;: &quot;Fields grew thin and poor after a few seasons&quot;, &quot;b&quot;: 1, &quot;fb&quot;: &quot;Right. Cotton wore out the soil quickly.&quot;, &quot;hint&quot;: &quot;Ask whether this brought wealth or hardship.&quot;}, {&quot;t&quot;: &quot;Northern and British mills bought the cotton&quot;, &quot;b&quot;: 0, &quot;fb&quot;: &quot;Right. The mills were customers for the crop.&quot;, &quot;hint&quot;: &quot;Ask whether this brought wealth or hardship.&quot;}, {&quot;t&quot;: &quot;Husbands were sold away from wives and children from parents&quot;, &quot;b&quot;: 1, &quot;fb&quot;: &quot;Right. The forced migration split up many families.&quot;, &quot;hint&quot;: &quot;Ask whether this brought wealth or hardship.&quot;}, {&quot;t&quot;: &quot;The law gave slaves almost no rights&quot;, &quot;b&quot;: 1, &quot;fb&quot;: &quot;Right. They could not testify against white people, and their marriages were not legally recognized.&quot;, &quot;hint&quot;: &quot;Ask whether this brought wealth or hardship.&quot;}, {&quot;t&quot;: &quot;Every acre of cotton earned a large profit&quot;, &quot;b&quot;: 0, &quot;fb&quot;: &quot;Right. That is why planters wanted more land.&quot;, &quot;hint&quot;: &quot;Ask whether this brought wealth or hardship.&quot;}]}"><div class="widget-kicker">&#9889; SORT IT &middot; GAIN OR COST?</div><div class="widget-question">Sort each result of the cotton boom.</div><div class="ow-body"></div><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">Resisting Slavery</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Slaves resisted in many ways. Some worked slowly, broke tools, or pretended not to understand an order. Some learned to read in secret, even though it was against the law in many states. Some ran away, and a few were helped by free Black people and white allies. A few rose in open revolt. Resistance was dangerous, and the penalties were severe. But the effort never stopped.</p>
 <div class="callout-help" style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 12px 18px; margin: 12px 0;">
 <div class="callout-kicker-help" style="font-size: 10px; color: #1B6A94; margin-bottom: 6px; ">&#128161; Look at a Map</div>
 <div class="card-body" style="font-size: 15px; color: #1a2340; line-height: 1.55;">Find a map of the Cotton Kingdom, from South Carolina to Texas. Notice where the cotton fields move over the decades, and notice where slaves were sold. Maps like these help you see cause and effect: cotton demand pulled slaves west and south.</div>
 </div>
+<div class="optima-widget ow-select"><div class="widget-kicker">&#9889; TRY IT &middot; CULTURE AND RESISTANCE</div><div class="widget-question">Choose the answer that fits each question.</div><div class="widget-row" data-correct="2" data-fb="Right. Some spirituals also carried hidden messages." data-hint="The lesson names religious songs created by slaves."><div class="widget-row-prompt">1. What did slaves create to carry faith, sorrow, and freedom?</div><div class="widget-options"><button type="button" data-choice="0">Almanacs</button><button type="button" data-choice="1">Coffles</button><button type="button" data-choice="2">Spirituals</button><button type="button" data-choice="3">Camp meetings</button></div></div><div class="widget-row" data-correct="3" data-fb="Right. Resistance was dangerous, and the penalties were severe." data-hint="Reread the Resisting Slavery section."><div class="widget-row-prompt">2. Which of these was a way slaves resisted?</div><div class="widget-options"><button type="button" data-choice="0">Voting in local elections</button><button type="button" data-choice="1">Joining the overseers&#x27; gangs</button><button type="button" data-choice="2">Taking the planter&#x27;s land</button><button type="button" data-choice="3">Working slowly, breaking tools, or pretending not to understand an order</button></div></div><div class="widget-row" data-correct="1" data-fb="Right. Religion gave them hope." data-hint="Reread the Life on the Plantation section."><div class="widget-row-prompt">3. Where did many slaves hold their own worship?</div><div class="widget-options"><button type="button" data-choice="0">Only in the planter&#x27;s house</button><button type="button" data-choice="1">In secret if they had to, away from the overseer</button><button type="button" data-choice="2">In schools built by the state</button><button type="button" data-choice="3">Nowhere, because it was not allowed</button></div></div><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">The Stakes Rise</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">By 1850 the South&rsquo;s wealthiest class, the planters, had a permanent stake in slavery and in its expansion. Every new territory was a place where slavery might spread. Every new state would send two senators to Washington. That is why the next lessons focus on the fights over new land.</p>
 </div>
@@ -368,6 +412,186 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+<script>
+(function () {
+  function shuffle(a) {
+    var b = a.slice(), i, j, t;
+    for (i = b.length - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = b[i]; b[i] = b[j]; b[j] = t; }
+    return b;
+  }
+  function mk(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function fbRow(row, ok, text) {
+    var rf = row.querySelector('.row-feedback');
+    if (!rf) { rf = mk('div'); rf.setAttribute('data-ra-skip', ''); row.appendChild(rf); }
+    rf.className = 'row-feedback ' + (ok ? 'correct' : 'incorrect');
+    rf.textContent = text;
+  }
+
+  /* ---------- Sorter ---------- */
+  function initSort(w) {
+    var cfg = JSON.parse(w.getAttribute('data-config'));
+    var body = w.querySelector('.ow-body');
+    body.innerHTML = '';
+    var placed = 0;
+    cfg.items.forEach(function (it, n) {
+      var row = mk('div', 'widget-row');
+      row.setAttribute('data-correct', it.b);
+      row.setAttribute('data-n', n);
+      row.appendChild(mk('div', 'widget-row-prompt', (n + 1) + '. ' + it.t));
+      var opts = mk('div', 'widget-options');
+      cfg.bins.forEach(function (b, k) {
+        var btn = mk('button', '', b);
+        btn.setAttribute('type', 'button');
+        btn.setAttribute('data-choice', k);
+        opts.appendChild(btn);
+      });
+      row.appendChild(opts);
+      body.appendChild(row);
+    });
+    var tally = mk('div', 'sort-tally', '0 of ' + cfg.items.length + ' sorted');
+    tally.setAttribute('data-ra-skip', '');
+    body.appendChild(tally);
+    var bins = mk('div', 'sort-bins');
+    bins.setAttribute('data-ra-skip', '');
+    cfg.bins.forEach(function (b) {
+      var d = mk('div', 'sort-bin');
+      d.appendChild(mk('h4', '', b));
+      bins.appendChild(d);
+    });
+    body.appendChild(bins);
+  }
+
+  /* ---------- Order ---------- */
+  function initOrder(w) {
+    var cfg = JSON.parse(w.getAttribute('data-config'));
+    var body = w.querySelector('.ow-body');
+    body.innerHTML = '';
+    var list = mk('ol', 'order-list');
+    list.setAttribute('data-ra-skip', '');
+    var pool = mk('div', 'order-pool');
+    var idx = cfg.items.map(function (_, i) { return i; });
+    var sh = shuffle(idx), tries = 0;
+    while (tries < 20 && sh.every(function (v, i) { return v === i; })) { sh = shuffle(idx); tries++; }
+    sh.forEach(function (i) {
+      var b = mk('button', '', cfg.items[i]);
+      b.setAttribute('type', 'button');
+      b.setAttribute('data-i', i);
+      pool.appendChild(b);
+    });
+    w.setAttribute('data-next', 0);
+    var fb = mk('div', 'widget-feedback');
+    fb.setAttribute('data-ra-skip', '');
+    body.appendChild(list);
+    body.appendChild(pool);
+    body.appendChild(fb);
+  }
+
+  function initAll() {
+    document.querySelectorAll('.optima-widget.ow-sort').forEach(initSort);
+    document.querySelectorAll('.optima-widget.ow-order').forEach(initOrder);
+  }
+  initAll();
+
+  document.addEventListener('click', function (e) {
+    /* Reset (any engine) */
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      if (w.classList.contains('ow-sort')) { initSort(w); return; }
+      if (w.classList.contains('ow-order')) { initOrder(w); return; }
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.open = false; });
+      return;
+    }
+    /* Reflective check-in: no right answer */
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.getAttribute('data-response') || '';
+      fb.classList.add('show');
+      return;
+    }
+    /* Single-select rows and scale */
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.getAttribute('data-choice') === row.getAttribute('data-correct');
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      fbRow(row, right, right ? (row.getAttribute('data-fb') || 'Right.') : (sBtn.getAttribute('data-fb') || row.getAttribute('data-hint') || 'Not quite. Try again.'));
+      return;
+    }
+    /* Sorter */
+    var oBtn = e.target.closest('.ow-sort .widget-row .widget-options button');
+    if (oBtn) {
+      var sw = oBtn.closest('.optima-widget');
+      var cfg = JSON.parse(sw.getAttribute('data-config'));
+      var r = oBtn.closest('.widget-row');
+      var it = cfg.items[parseInt(r.getAttribute('data-n'), 10)];
+      if (r.classList.contains('done')) return;
+      r.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+      var ok = parseInt(oBtn.getAttribute('data-choice'), 10) === it.b;
+      oBtn.classList.add(ok ? 'correct' : 'incorrect');
+      fbRow(r, ok, ok ? it.fb : it.hint);
+      if (ok) {
+        r.classList.add('done');
+        var bin = sw.querySelectorAll('.sort-bin')[it.b];
+        bin.appendChild(mk('div', 'sort-chip', it.t));
+        var n = sw.querySelectorAll('.widget-row.done').length;
+        sw.querySelector('.sort-tally').textContent = n + ' of ' + cfg.items.length + ' sorted';
+      }
+      return;
+    }
+    /* Order */
+    var pBtn = e.target.closest('.ow-order .order-pool button');
+    if (pBtn) {
+      var ow = pBtn.closest('.optima-widget');
+      var oc = JSON.parse(ow.getAttribute('data-config'));
+      var next = parseInt(ow.getAttribute('data-next'), 10);
+      var fb2 = ow.querySelector('.widget-feedback');
+      var i = parseInt(pBtn.getAttribute('data-i'), 10);
+      if (i === next) {
+        var li = mk('li');
+        var nb = mk('b', '', (next + 1) + '.');
+        li.appendChild(nb);
+        li.appendChild(document.createTextNode(oc.items[i]));
+        ow.querySelector('.order-list').appendChild(li);
+        pBtn.remove();
+        next++;
+        ow.setAttribute('data-next', next);
+        if (next === oc.items.length) {
+          fb2.textContent = oc.done;
+          fb2.classList.add('show');
+        } else {
+          fb2.classList.remove('show');
+          fb2.textContent = '';
+        }
+      } else {
+        pBtn.classList.add('nope');
+        setTimeout(function () { pBtn.classList.remove('nope'); }, 700);
+        fb2.textContent = oc.hint;
+        fb2.classList.add('show');
+      }
+      return;
+    }
+    /* Flip card */
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 </script>
 
 </body>
