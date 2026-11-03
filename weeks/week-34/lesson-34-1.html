@@ -65,9 +65,50 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .term-audio:hover { background: #FDF3E3; }
 
 .term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+/* ===== Optima widgets (inline, ungraded practice) ===== */
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 16px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8a6216; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options button { flex: 1 1 110px; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 14px 18px; cursor: pointer; text-align: center; margin-bottom: 10px; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; font-size: 15px; line-height: 1.55; }
+.ow-flip .ow-flip-front { font-size: 17px; color: #0E1C42; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.sort-bins { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 4px; }
+.sort-bin { flex: 1 1 140px; background: #FFFFFF; border: 1.5px dashed #A9BBD1; border-radius: 8px; padding: 8px 10px; min-height: 56px; }
+.sort-bin h4 { margin: 0 0 6px 0; font-size: 13px; color: #1B6A94; }
+.sort-chip { font-size: 13px; background: #D8F0DD; border: 1px solid #2A9D5C; color: #1A6B3D; border-radius: 6px; padding: 4px 8px; margin: 4px 0; line-height: 1.4; }
+.sort-tally { font-size: 12px; color: #6b7a99; margin: 4px 0 2px; }
+.order-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.order-pool button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 12px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+.order-pool button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.order-pool button.nope { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.order-list { margin: 0 0 8px 0; padding: 0; list-style: none; }
+.order-list li { background: #D8F0DD; border: 1px solid #2A9D5C; color: #1A6B3D; border-radius: 6px; padding: 7px 10px; margin-bottom: 6px; font-size: 14px; line-height: 1.4; }
+.order-list li b { margin-right: 6px; }
+details.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; }
+details.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+details.ow-reveal .reveal-body { margin-top: 10px; padding: 10px 12px; background: #FDF3E3; border-left: 3px solid #C7922C; border-radius: 4px; font-size: 15px; line-height: 1.55; color: #1a2340; }
+
 </style>
 </head>
-<body data-lesson-id="6.7" data-week="34">
+<body data-lesson-id="6.7" data-week="34" data-widgets="5">
 
 <div class="oa-header">
   <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
@@ -332,17 +373,22 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Grant then moved his army across the James River and attacked the railroad town of Petersburg, south of Richmond. When the first attack failed, the armies dug in. The siege of Petersburg lasted nine months. Lee was pinned down, and his supply lines were being cut one by one.</p>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">Atlanta</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In Georgia, Sherman pushed toward Atlanta, a key railroad and factory center. Confederate General Joseph Johnston fell back from position to position. President Davis grew impatient and replaced him with a bolder general, John Bell Hood. Hood attacked and lost many men. On September 2, 1864, Sherman telegraphed Lincoln that Atlanta was won.</p>
+<div class="optima-widget ow-flipset"><div class="widget-kicker">&#9889; TAP TO REVEAL · THREE THINGS FROM THE SPRING AND SUMMER OF 1864</div><div class="widget-question">In your notebook, answer each question from what you read. Then tap a card to compare.</div><div class="ow-flip" tabindex="0"><div class="ow-flip-front">What was a lieutenant general?</div><div class="ow-flip-back" data-ra-skip>A rank Lincoln gave Grant in March 1864, putting him in charge of all Union armies.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front">What was the Overland Campaign?</div><div class="ow-flip-back" data-ra-skip>Six weeks of almost daily fighting between Grant and Lee at the Wilderness, Spotsylvania, Cold Harbor, and other places.</div></div><div class="ow-flip" tabindex="0"><div class="ow-flip-front">What happened at Petersburg?</div><div class="ow-flip-back" data-ra-skip>When the first attack failed, the armies dug in. The siege lasted nine months.</div></div><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">An Election in Wartime</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Atlanta came at the right time for Lincoln. That summer, with Grant&rsquo;s heavy losses and no end in sight, Northern voters grew tired. Lincoln himself believed he would probably lose. His opponent was General George McClellan, running as a Democrat. The party platform called the war a failure and demanded peace, but McClellan said he would not accept peace without the Union.</p>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The fall of Atlanta changed the mood. On November 8, Lincoln won all but three states and received 212 electoral votes to McClellan&rsquo;s 21. Most soldiers voted for him. The country held a national election in the middle of a civil war, which few nations have done. It showed a republic with a strong civic habit of resolving disputes by vote, even in a crisis. It also meant that voters had approved of both the Union and emancipation.</p>
+<div class="optima-widget ow-select"><div class="widget-kicker">&#9889; TRY IT · GRANT, HOOD, AND THE ELECTION</div><div class="widget-question">Choose the answer that fits each question.</div><div class="widget-row" data-correct="2" data-fb="Right. Davis was impatient with Johnston falling back. Hood attacked and lost many men." data-hint="Reread the Atlanta section."><div class="widget-row-prompt">1. Why did Davis replace General Johnston with John Bell Hood?</div><div class="widget-options"><button type="button" data-choice="0">Johnston was captured</button><button type="button" data-choice="1">Johnston asked to leave</button><button type="button" data-choice="2">Davis wanted a bolder general</button><button type="button" data-choice="3">Hood was Sherman&#x27;s friend</button></div></div><div class="widget-row" data-correct="0" data-fb="Right. McClellan ran as a Democrat, but said he would not accept peace without the Union." data-hint="Reread the section on the election."><div class="widget-row-prompt">2. Who was Lincoln&#x27;s opponent in the election of 1864?</div><div class="widget-options"><button type="button" data-choice="0">George McClellan</button><button type="button" data-choice="1">Ulysses S. Grant</button><button type="button" data-choice="2">Joseph Johnston</button><button type="button" data-choice="3">Philip Sheridan</button></div></div><div class="widget-row" data-correct="1" data-fb="Right. Soldiers cheered when they saw which way they were headed." data-hint="Reread the Overland Campaign. Earlier generals would have gone back."><div class="widget-row-prompt">3. After two days of fighting in the Wilderness with no winner, what did Grant do?</div><div class="widget-options"><button type="button" data-choice="0">Went back to rest</button><button type="button" data-choice="1">Turned south around Lee&#x27;s flank and kept going</button><button type="button" data-choice="2">Asked Lee for peace</button><button type="button" data-choice="3">Marched to Atlanta</button></div></div><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">The March to the Sea</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In November Sherman left Atlanta with about 60,000 men and cut himself off from his supply lines. Over the next five weeks he marched about 285 miles to the coast at Savannah. His soldiers destroyed railroads by heating the rails and twisting them around trees. They would <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="To search the countryside for food and supplies."><b>forage</b></span>, and they took crops, livestock, and sometimes burned barns, mills, and cotton gins. They did not usually kill civilians, but the path of damage was about sixty miles wide. In the fall General Philip Sheridan had also burned barns and mills in the Shenandoah Valley, the Confederacy&rsquo;s breadbasket. Sherman offered Savannah to Lincoln as a Christmas gift. Thousands of freed people followed his army.</p>
+<div class="optima-widget ow-reflect"><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">An army has destroyed railroads and taken crops, but has not usually killed civilians. How far do you think an army should go to end a war sooner? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button type="button" data-response="That was how earlier generals saw war. Sherman believed armies alone could not beat the Confederacy, because its farms and railroads fed and supplied its armies.">Only fight other soldiers</button><button type="button" data-response="That was Sherman&#x27;s reasoning. Railroads and farms kept the Confederate armies going.">Also cut off what supplies the army</button><button type="button" data-response="Sherman wrote that &quot;war is cruelty, and you cannot refine it.&quot; But he did not usually kill civilians. He aimed at property and the will to fight.">Whatever it takes</button><button type="button" data-response="Read on to see what Sherman believed and what others said.">I need more information</button></div><div class="widget-feedback" data-ra-skip></div><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">Sherman&rsquo;s Idea of War</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Sherman believed in <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="War aimed at an enemy&rsquo;s farms, railroads, and factories as well as its armies."><b>total war</b></span>. He thought that the Confederacy could not be beaten by armies alone, because its farms and railroads fed and supplied those armies, and because the people at home kept up the will to fight. He wrote that &ldquo;war is cruelty, and you cannot refine it.&rdquo; He wanted Southerners to see that rebellion would cost them everything, so they would end it sooner. Sherman argued that a harsh war was a shorter war, and in the long run a more merciful one.</p>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Others disagreed. Some then and since have said that destroying private property and hurting civilians went too far. You will decide for yourself in the discussion for these lessons. Think about what Sherman did, what he did not do, and what he believed he was trying to accomplish.</p>
+<div class="optima-widget ow-sort" data-config="{&quot;bins&quot;: [&quot;Grant&quot;, &quot;Sherman&quot;], &quot;items&quot;: [{&quot;t&quot;: &quot;Took an army into Georgia&quot;, &quot;b&quot;: 1, &quot;fb&quot;: &quot;Right. Sherman pushed toward Atlanta.&quot;, &quot;hint&quot;: &quot;Which general went after Atlanta?&quot;}, {&quot;t&quot;: &quot;Traveled with the Army of the Potomac and went after Lee&quot;, &quot;b&quot;: 0, &quot;fb&quot;: &quot;Right. Grant went with the army.&quot;, &quot;hint&quot;: &quot;Which general went after Lee?&quot;}, {&quot;t&quot;: &quot;Cut himself off from his supply lines and marched toward the coast&quot;, &quot;b&quot;: 1, &quot;fb&quot;: &quot;Right. He reached Savannah after about 285 miles.&quot;, &quot;hint&quot;: &quot;Which general marched to the sea?&quot;}, {&quot;t&quot;: &quot;Ordered an attack at Cold Harbor that he later regretted&quot;, &quot;b&quot;: 0, &quot;fb&quot;: &quot;Right. In less than an hour thousands of Union soldiers fell.&quot;, &quot;hint&quot;: &quot;Which general ordered it?&quot;}, {&quot;t&quot;: &quot;Soldiers heated rails and twisted them around trees&quot;, &quot;b&quot;: 1, &quot;fb&quot;: &quot;Right. They destroyed railroads as they went.&quot;, &quot;hint&quot;: &quot;Whose army marched through Georgia?&quot;}, {&quot;t&quot;: &quot;Moved the army across the James River to attack Petersburg&quot;, &quot;b&quot;: 0, &quot;fb&quot;: &quot;Right. The siege lasted nine months.&quot;, &quot;hint&quot;: &quot;Which general was fighting Lee?&quot;}]}"><div class="widget-kicker">&#9889; SORT IT · WHO HAD THE PLAN</div><div class="widget-question">Sort each action under the general who carried it out.</div><div class="ow-body"></div><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">What Remained</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">By early 1865 the Confederacy&rsquo;s economy and armies were broken. But Lee&rsquo;s army was still in the field. Lincoln&rsquo;s reelection had shown that the North would stay with the war until the end. What the peace would look like, and what would happen to four million freed people, was still unknown.</p>
 </div>
+<div class="optima-widget ow-order" data-config="{&quot;items&quot;: [&quot;Grant becomes lieutenant general in charge of all Union armies&quot;, &quot;Grant and Lee fight in the Wilderness&quot;, &quot;The attack at Cold Harbor&quot;, &quot;Sherman telegraphs that Atlanta is won&quot;, &quot;Lincoln wins the election&quot;, &quot;Sherman reaches Savannah&quot;], &quot;hint&quot;: &quot;That came later. Which event had to happen first?&quot;, &quot;done&quot;: &quot;Right. The year built from Grant&#x27;s plan to Atlanta, the election, and the March to the Sea.&quot;}"><div class="widget-kicker">&#9889; PUT IT IN ORDER · THE YEAR 1864</div><div class="widget-question">Tap the events in the order they happened, earliest first.</div><div class="ow-body"></div><button type="button" class="widget-reset">Reset</button></div>
 <div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
 <div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">&#10145;&#65039; What You'll Do Next</div>
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Read the first primary source for these lessons (Lincoln, Second Inaugural Address, 1865) and answer the Critical Questions.</b></div></div>
@@ -366,5 +412,184 @@ function oaPronounce(text) {
 }
 </script>
 
+<script>
+(function () {
+  function shuffle(a) {
+    var b = a.slice(), i, j, t;
+    for (i = b.length - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = b[i]; b[i] = b[j]; b[j] = t; }
+    return b;
+  }
+  function mk(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function fbRow(row, ok, text) {
+    var rf = row.querySelector('.row-feedback');
+    if (!rf) { rf = mk('div'); rf.setAttribute('data-ra-skip', ''); row.appendChild(rf); }
+    rf.className = 'row-feedback ' + (ok ? 'correct' : 'incorrect');
+    rf.textContent = text;
+  }
+
+  /* ---------- Sorter ---------- */
+  function initSort(w) {
+    var cfg = JSON.parse(w.getAttribute('data-config'));
+    var body = w.querySelector('.ow-body');
+    body.innerHTML = '';
+    var placed = 0;
+    cfg.items.forEach(function (it, n) {
+      var row = mk('div', 'widget-row');
+      row.setAttribute('data-correct', it.b);
+      row.setAttribute('data-n', n);
+      row.appendChild(mk('div', 'widget-row-prompt', (n + 1) + '. ' + it.t));
+      var opts = mk('div', 'widget-options');
+      cfg.bins.forEach(function (b, k) {
+        var btn = mk('button', '', b);
+        btn.setAttribute('type', 'button');
+        btn.setAttribute('data-choice', k);
+        opts.appendChild(btn);
+      });
+      row.appendChild(opts);
+      body.appendChild(row);
+    });
+    var tally = mk('div', 'sort-tally', '0 of ' + cfg.items.length + ' sorted');
+    tally.setAttribute('data-ra-skip', '');
+    body.appendChild(tally);
+    var bins = mk('div', 'sort-bins');
+    bins.setAttribute('data-ra-skip', '');
+    cfg.bins.forEach(function (b) {
+      var d = mk('div', 'sort-bin');
+      d.appendChild(mk('h4', '', b));
+      bins.appendChild(d);
+    });
+    body.appendChild(bins);
+  }
+
+  /* ---------- Order ---------- */
+  function initOrder(w) {
+    var cfg = JSON.parse(w.getAttribute('data-config'));
+    var body = w.querySelector('.ow-body');
+    body.innerHTML = '';
+    var list = mk('ol', 'order-list');
+    list.setAttribute('data-ra-skip', '');
+    var pool = mk('div', 'order-pool');
+    var idx = cfg.items.map(function (_, i) { return i; });
+    var sh = shuffle(idx), tries = 0;
+    while (tries < 20 && sh.every(function (v, i) { return v === i; })) { sh = shuffle(idx); tries++; }
+    sh.forEach(function (i) {
+      var b = mk('button', '', cfg.items[i]);
+      b.setAttribute('type', 'button');
+      b.setAttribute('data-i', i);
+      pool.appendChild(b);
+    });
+    w.setAttribute('data-next', 0);
+    var fb = mk('div', 'widget-feedback');
+    fb.setAttribute('data-ra-skip', '');
+    body.appendChild(list);
+    body.appendChild(pool);
+    body.appendChild(fb);
+  }
+
+  function initAll() {
+    document.querySelectorAll('.optima-widget.ow-sort').forEach(initSort);
+    document.querySelectorAll('.optima-widget.ow-order').forEach(initOrder);
+  }
+  initAll();
+
+  document.addEventListener('click', function (e) {
+    /* Reset (any engine) */
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      if (w.classList.contains('ow-sort')) { initSort(w); return; }
+      if (w.classList.contains('ow-order')) { initOrder(w); return; }
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.open = false; });
+      return;
+    }
+    /* Reflective check-in: no right answer */
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.getAttribute('data-response') || '';
+      fb.classList.add('show');
+      return;
+    }
+    /* Single-select rows and scale */
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.getAttribute('data-choice') === row.getAttribute('data-correct');
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      fbRow(row, right, right ? (row.getAttribute('data-fb') || 'Right.') : (sBtn.getAttribute('data-fb') || row.getAttribute('data-hint') || 'Not quite. Try again.'));
+      return;
+    }
+    /* Sorter */
+    var oBtn = e.target.closest('.ow-sort .widget-row .widget-options button');
+    if (oBtn) {
+      var sw = oBtn.closest('.optima-widget');
+      var cfg = JSON.parse(sw.getAttribute('data-config'));
+      var r = oBtn.closest('.widget-row');
+      var it = cfg.items[parseInt(r.getAttribute('data-n'), 10)];
+      if (r.classList.contains('done')) return;
+      r.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+      var ok = parseInt(oBtn.getAttribute('data-choice'), 10) === it.b;
+      oBtn.classList.add(ok ? 'correct' : 'incorrect');
+      fbRow(r, ok, ok ? it.fb : it.hint);
+      if (ok) {
+        r.classList.add('done');
+        var bin = sw.querySelectorAll('.sort-bin')[it.b];
+        bin.appendChild(mk('div', 'sort-chip', it.t));
+        var n = sw.querySelectorAll('.widget-row.done').length;
+        sw.querySelector('.sort-tally').textContent = n + ' of ' + cfg.items.length + ' sorted';
+      }
+      return;
+    }
+    /* Order */
+    var pBtn = e.target.closest('.ow-order .order-pool button');
+    if (pBtn) {
+      var ow = pBtn.closest('.optima-widget');
+      var oc = JSON.parse(ow.getAttribute('data-config'));
+      var next = parseInt(ow.getAttribute('data-next'), 10);
+      var fb2 = ow.querySelector('.widget-feedback');
+      var i = parseInt(pBtn.getAttribute('data-i'), 10);
+      if (i === next) {
+        var li = mk('li');
+        var nb = mk('b', '', (next + 1) + '.');
+        li.appendChild(nb);
+        li.appendChild(document.createTextNode(oc.items[i]));
+        ow.querySelector('.order-list').appendChild(li);
+        pBtn.remove();
+        next++;
+        ow.setAttribute('data-next', next);
+        if (next === oc.items.length) {
+          fb2.textContent = oc.done;
+          fb2.classList.add('show');
+        } else {
+          fb2.classList.remove('show');
+          fb2.textContent = '';
+        }
+      } else {
+        pBtn.classList.add('nope');
+        setTimeout(function () { pBtn.classList.remove('nope'); }, 700);
+        fb2.textContent = oc.hint;
+        fb2.classList.add('show');
+      }
+      return;
+    }
+    /* Flip card */
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
 </body>
 </html>
