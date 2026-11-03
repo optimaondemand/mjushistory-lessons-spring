@@ -65,9 +65,50 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .term-audio:hover { background: #FDF3E3; }
 
 .term { border-bottom: 1.5px dotted #C7922C; color: #0E1C42; cursor: help; }
+
+/* ===== Optima widgets (inline, ungraded practice) ===== */
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; text-transform: uppercase; }
+.widget-question { font-size: 16px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #8a6216; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options button { flex: 1 1 110px; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 14px 18px; cursor: pointer; text-align: center; margin-bottom: 10px; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; font-size: 15px; line-height: 1.55; }
+.ow-flip .ow-flip-front { font-size: 17px; color: #0E1C42; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+.sort-bins { display: flex; flex-wrap: wrap; gap: 10px; margin: 12px 0 4px; }
+.sort-bin { flex: 1 1 140px; background: #FFFFFF; border: 1.5px dashed #A9BBD1; border-radius: 8px; padding: 8px 10px; min-height: 56px; }
+.sort-bin h4 { margin: 0 0 6px 0; font-size: 13px; color: #1B6A94; }
+.sort-chip { font-size: 13px; background: #D8F0DD; border: 1px solid #2A9D5C; color: #1A6B3D; border-radius: 6px; padding: 4px 8px; margin: 4px 0; line-height: 1.4; }
+.sort-tally { font-size: 12px; color: #6b7a99; margin: 4px 0 2px; }
+.order-pool { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.order-pool button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 12px; font-size: 14px; color: #0E1C42; cursor: pointer; font-family: inherit; text-align: left; line-height: 1.4; }
+.order-pool button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.order-pool button.nope { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.order-list { margin: 0 0 8px 0; padding: 0; list-style: none; }
+.order-list li { background: #D8F0DD; border: 1px solid #2A9D5C; color: #1A6B3D; border-radius: 6px; padding: 7px 10px; margin-bottom: 6px; font-size: 14px; line-height: 1.4; }
+.order-list li b { margin-right: 6px; }
+details.ow-reveal { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 10px 14px; margin-bottom: 8px; }
+details.ow-reveal summary { cursor: pointer; font-size: 15px; color: #0E1C42; line-height: 1.5; }
+details.ow-reveal .reveal-body { margin-top: 10px; padding: 10px 12px; background: #FDF3E3; border-left: 3px solid #C7922C; border-radius: 4px; font-size: 15px; line-height: 1.55; color: #1a2340; }
 </style>
 </head>
-<body data-lesson-id="5.2" data-week="29">
+<body data-lesson-id="5.2" data-week="29" data-widgets="4">
 
 <div class="oa-header">
   <div class="brand"><div class="brand-dot"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 40px; height: 32px; object-fit: contain;" /></div><div><div class="brand-name">Optima Academy Online</div><div class="brand-tag">An Education Experience Company</div></div></div>
@@ -324,6 +365,8 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Senator Stephen Douglas of Illinois was short, quick, and full of energy. People called him the &ldquo;Little Giant.&rdquo; He believed the nation&rsquo;s future lay in building, not in arguing over slavery. In 1854 he tried to clear the way for a railroad to the Pacific, and the plan ended with the Missouri Compromise destroyed and blood spilled in Kansas.</p>
 </div>
 <div class="card card-gold-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #C7922C;">
+
+<div class="optima-widget ow-reflect"><div class="widget-kicker">&#9889; QUICK CHECK-IN</div><div class="widget-question">Imagine a new territory is opening to settlers. Who should decide whether slavery is allowed there? (No wrong answer. Just check in with yourself.)</div><div class="widget-options"><button type="button" data-response="That idea is called popular sovereignty, and it is what Douglas proposed. As you read, ask whether it kept the peace.">The settlers, by voting</button><button type="button" data-response="That is close to what Congress did in 1820 with a line on the map. Watch what happens to that line in this lesson.">Congress, for the whole nation</button><button type="button" data-response="In 1857 the Court did try to settle it. The lesson shows how the country reacted.">The Supreme Court</button></div><div class="widget-feedback" data-ra-skip></div><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">A Railroad and a Price</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Douglas wanted a railroad to link Chicago to the Pacific coast. To build it, the land west of Missouri and Iowa had to be organized into territories with governments and laws. Southern senators had their own ideas about where the railroad should go. They also noticed something else. Under the Missouri Compromise of 1820, slavery was forbidden in this whole region, north of the 36&deg;30&prime; line. Southern senators would not vote to organize it unless the ban came off.</p>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Douglas agreed. His Kansas-Nebraska Act of 1854 created two new territories, Kansas and Nebraska. It said the settlers in each would decide the slavery question by popular sovereignty, which means a vote of the people living there. It also <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="To cancel a law so that it no longer applies."><b>repeal</b></span>ed the Missouri Compromise ban. President Franklin Pierce signed it. Douglas probably thought the settlers would keep slavery out of Nebraska on their own, and he did not seem to expect how Northerners would react.</p>
@@ -334,13 +377,19 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Kansas became the test of popular sovereignty. Both sides rushed settlers in. When the first elections came, thousands of Missourians crossed the border to vote, and a proslavery government took power. Free-state settlers refused to accept it and set up their own government in Topeka. For a time, Kansas had two governments and no peace.</p>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">In May 1856 a proslavery force attacked the free-state town of Lawrence. Days later, an abolitionist named John Brown led a night raid that killed five proslavery settlers along Pottawatomie Creek. Violence in the territory lasted for years, and dozens of people died. People began calling the place &ldquo;Bleeding Kansas.&rdquo; It was the first place where the nation&rsquo;s quarrel turned into fighting between neighbors, and each side blamed the other.</p>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The violence reached the Senate itself. After Senator Charles Sumner of Massachusetts gave a harsh speech about Kansas, Congressman Preston Brooks of South Carolina beat him with a cane on the Senate floor. Sumner needed years to recover. Northerners saw Brooks as a brute. Many Southerners sent Brooks new canes to show their support. The two sections no longer saw the same events in the same way.</p>
+
+<div class="optima-widget ow-sort" data-config="{&quot;bins&quot;: [&quot;Proslavery side&quot;, &quot;Free-state side&quot;], &quot;items&quot;: [{&quot;t&quot;: &quot;Led by John Brown, killed five settlers along Pottawatomie Creek&quot;, &quot;b&quot;: 1, &quot;fb&quot;: &quot;Right. Brown was an abolitionist who killed five proslavery settlers.&quot;, &quot;hint&quot;: &quot;Brown was an abolitionist. Which side does that put him on?&quot;}, {&quot;t&quot;: &quot;Thousands crossed the border from Missouri to vote in the first elections&quot;, &quot;b&quot;: 0, &quot;fb&quot;: &quot;Right. The Missourians helped a proslavery government take power.&quot;, &quot;hint&quot;: &quot;Which side gained when outsiders from Missouri voted?&quot;}, {&quot;t&quot;: &quot;Refused to accept the first government&quot;, &quot;b&quot;: 1, &quot;fb&quot;: &quot;Right. Free-state settlers would not accept it.&quot;, &quot;hint&quot;: &quot;Think about who the first government favored.&quot;}, {&quot;t&quot;: &quot;Attacked the town of Lawrence in May 1856&quot;, &quot;b&quot;: 0, &quot;fb&quot;: &quot;Right. A proslavery force attacked the free-state town.&quot;, &quot;hint&quot;: &quot;Lawrence was a free-state town. Who attacked it?&quot;}, {&quot;t&quot;: &quot;Took power as the government of the territory&quot;, &quot;b&quot;: 0, &quot;fb&quot;: &quot;Right. After the first elections, a proslavery government took power.&quot;, &quot;hint&quot;: &quot;Think about who won those first elections.&quot;}, {&quot;t&quot;: &quot;Set up a rival government in Topeka&quot;, &quot;b&quot;: 1, &quot;fb&quot;: &quot;Right. Kansas now had two governments and no peace.&quot;, &quot;hint&quot;: &quot;Which side needed a government of its own?&quot;}]}"><div class="widget-kicker">&#9889; SORT IT &middot; KANSAS, TWO SIDES</div><div class="widget-question">Sort each event by the side that did it.</div><div class="ow-body"></div><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">The Court Steps In</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Many Americans hoped the Supreme Court could end the argument. In 1857 it took up the case of a Missouri slave named Dred Scott. His master, an army doctor, had taken him to live for a time in Illinois, a free state, and in what is now Minnesota, a place where the Missouri Compromise banned slavery. After his master died, Scott sued for his freedom, arguing that living on free soil had made him free.</p>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">The case reached the Supreme Court. <span class="term" style="border-bottom: 1.5px dotted #C7922C; color: #0E1C42;" title="The leading judge of the Supreme Court."><b>chief justice</b></span> Roger Taney of Maryland wrote the opinion. The Court decided against Scott by a vote of 7 to 2. Taney wrote that no Black person, free or slave, could be a citizen of the United States and so could not sue in federal court. He also wrote that Congress had no power to ban slavery in the territories. That meant the Missouri Compromise had always been unconstitutional.</p>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">You will read part of Taney&rsquo;s opinion. Southerners were pleased. They thought the Court had settled the question in their favor. The North was shocked. Republicans said the decision made their entire program illegal, because their whole purpose was to keep slavery out of the territories. The Court had tried to settle what Congress could not, and instead it made the fight worse.</p>
+
+<div class="optima-widget ow-revealset"><div class="widget-kicker">&#9889; WRITE FIRST &middot; WHAT THE COURT DECIDED</div><div class="widget-question">The Court tried to settle the argument that Congress could not.</div><details class="ow-reveal"><summary>In your notebook, write what Chief Justice Taney decided about two things: whether Black people could be citizens, and whether Congress could ban slavery in the territories. Then open to compare.</summary><div class="reveal-body" data-ra-skip>Taney wrote that no Black person, free or slave, could be a citizen of the United States, so Scott could not sue in federal court. He also wrote that Congress had no power to ban slavery in the territories, which meant the Missouri Compromise had always been unconstitutional.</div></details><button type="button" class="widget-reset">Reset</button></div>
 <h3 style="font-size: 18px; color: #0e1c42; margin: 20px 0 8px 0;">What Douglas Did Not See</h3>
 <p style="font-size: 15px; color: #1a2340; line-height: 1.58; margin: 0 0 9px 0;">Douglas was a skilled statesman with a gift for finding a deal. But his deals ran into a problem. He treated slavery as a question of procedure, to be settled by a vote. Many Northerners and many Southerners treated it as a question of right and wrong, and they would not accept a vote. His compromise failed to calm the South, angered the North, and ended in bloodshed. Douglas had hoped to be president one day, but now many in both sections distrusted him.</p>
 </div>
+
+<div class="optima-widget ow-scale"><div class="widget-kicker">&#9889; PLACE IT ON THE SPECTRUM</div><div class="widget-question">Was slavery a matter of procedure or a matter of right and wrong? Place each view on the spectrum.</div><div class="widget-row" data-correct="4" data-fb="Yes. They treated slavery as a question of right and wrong, and they would not accept a vote." data-hint="Think about people who would not accept a vote on the question."><div class="widget-row-prompt">Many Northerners and many Southerners</div><div class="widget-options"><button type="button" data-choice="0">A question of procedure, settled by a vote</button><button type="button" data-choice="1">Mostly procedure</button><button type="button" data-choice="2">In the middle</button><button type="button" data-choice="3">Mostly right and wrong</button><button type="button" data-choice="4">A question of right and wrong</button></div></div><div class="widget-row" data-correct="0" data-fb="Yes. Douglas treated slavery as a question of procedure, to be settled by a vote." data-hint="Reread how Douglas hoped to settle the question."><div class="widget-row-prompt">Douglas</div><div class="widget-options"><button type="button" data-choice="0">A question of procedure, settled by a vote</button><button type="button" data-choice="1">Mostly procedure</button><button type="button" data-choice="2">In the middle</button><button type="button" data-choice="3">Mostly right and wrong</button><button type="button" data-choice="4">A question of right and wrong</button></div></div><button type="button" class="widget-reset">Reset</button></div>
 <div class="card card-navy-top" style="background: #fff; border: 1px solid #D0D9E8; border-radius: 8px; padding: 16px 20px; margin-bottom: 16px; border-top: 3px solid #0E1C42;">
 <div class="card-kicker" style="font-size: 10px; color: #c7922c; margin-bottom: 10px;  ">&#10145;&#65039; What You'll Do Next</div>
 <div class="num-row" style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;"><div class="num-circle navy" style="min-width: 24px; height: 24px; border-radius: 50%; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: #0E1C42;">1</div><div class="num-text" style="font-size: 15px; color: #1a2340; line-height: 1.55;"><b>Read the first primary source for these lessons (Taney, Dred Scott v. Sandford, 1857, opinion excerpt) and answer the Critical Questions.</b></div></div>
@@ -362,6 +411,187 @@ function oaPronounce(text) {
   u.rate = 0.85;
   window.speechSynthesis.speak(u);
 }
+</script>
+
+
+<script>
+(function () {
+  function shuffle(a) {
+    var b = a.slice(), i, j, t;
+    for (i = b.length - 1; i > 0; i--) { j = Math.floor(Math.random() * (i + 1)); t = b[i]; b[i] = b[j]; b[j] = t; }
+    return b;
+  }
+  function mk(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined) e.textContent = text;
+    return e;
+  }
+  function fbRow(row, ok, text) {
+    var rf = row.querySelector('.row-feedback');
+    if (!rf) { rf = mk('div'); rf.setAttribute('data-ra-skip', ''); row.appendChild(rf); }
+    rf.className = 'row-feedback ' + (ok ? 'correct' : 'incorrect');
+    rf.textContent = text;
+  }
+
+  /* ---------- Sorter ---------- */
+  function initSort(w) {
+    var cfg = JSON.parse(w.getAttribute('data-config'));
+    var body = w.querySelector('.ow-body');
+    body.innerHTML = '';
+    var placed = 0;
+    cfg.items.forEach(function (it, n) {
+      var row = mk('div', 'widget-row');
+      row.setAttribute('data-correct', it.b);
+      row.setAttribute('data-n', n);
+      row.appendChild(mk('div', 'widget-row-prompt', (n + 1) + '. ' + it.t));
+      var opts = mk('div', 'widget-options');
+      cfg.bins.forEach(function (b, k) {
+        var btn = mk('button', '', b);
+        btn.setAttribute('type', 'button');
+        btn.setAttribute('data-choice', k);
+        opts.appendChild(btn);
+      });
+      row.appendChild(opts);
+      body.appendChild(row);
+    });
+    var tally = mk('div', 'sort-tally', '0 of ' + cfg.items.length + ' sorted');
+    tally.setAttribute('data-ra-skip', '');
+    body.appendChild(tally);
+    var bins = mk('div', 'sort-bins');
+    bins.setAttribute('data-ra-skip', '');
+    cfg.bins.forEach(function (b) {
+      var d = mk('div', 'sort-bin');
+      d.appendChild(mk('h4', '', b));
+      bins.appendChild(d);
+    });
+    body.appendChild(bins);
+  }
+
+  /* ---------- Order ---------- */
+  function initOrder(w) {
+    var cfg = JSON.parse(w.getAttribute('data-config'));
+    var body = w.querySelector('.ow-body');
+    body.innerHTML = '';
+    var list = mk('ol', 'order-list');
+    list.setAttribute('data-ra-skip', '');
+    var pool = mk('div', 'order-pool');
+    var idx = cfg.items.map(function (_, i) { return i; });
+    var sh = shuffle(idx), tries = 0;
+    while (tries < 20 && sh.every(function (v, i) { return v === i; })) { sh = shuffle(idx); tries++; }
+    sh.forEach(function (i) {
+      var b = mk('button', '', cfg.items[i]);
+      b.setAttribute('type', 'button');
+      b.setAttribute('data-i', i);
+      pool.appendChild(b);
+    });
+    w.setAttribute('data-next', 0);
+    var fb = mk('div', 'widget-feedback');
+    fb.setAttribute('data-ra-skip', '');
+    body.appendChild(list);
+    body.appendChild(pool);
+    body.appendChild(fb);
+  }
+
+  function initAll() {
+    document.querySelectorAll('.optima-widget.ow-sort').forEach(initSort);
+    document.querySelectorAll('.optima-widget.ow-order').forEach(initOrder);
+  }
+  initAll();
+
+  document.addEventListener('click', function (e) {
+    /* Reset (any engine) */
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      if (w.classList.contains('ow-sort')) { initSort(w); return; }
+      if (w.classList.contains('ow-order')) { initOrder(w); return; }
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      w.querySelectorAll('details').forEach(function (d) { d.open = false; });
+      return;
+    }
+    /* Reflective check-in: no right answer */
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.getAttribute('data-response') || '';
+      fb.classList.add('show');
+      return;
+    }
+    /* Single-select rows and scale */
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.getAttribute('data-choice') === row.getAttribute('data-correct');
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      fbRow(row, right, right ? (row.getAttribute('data-fb') || 'Right.') : (sBtn.getAttribute('data-fb') || row.getAttribute('data-hint') || 'Not quite. Try again.'));
+      return;
+    }
+    /* Sorter */
+    var oBtn = e.target.closest('.ow-sort .widget-row .widget-options button');
+    if (oBtn) {
+      var sw = oBtn.closest('.optima-widget');
+      var cfg = JSON.parse(sw.getAttribute('data-config'));
+      var r = oBtn.closest('.widget-row');
+      var it = cfg.items[parseInt(r.getAttribute('data-n'), 10)];
+      if (r.classList.contains('done')) return;
+      r.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('correct', 'incorrect'); });
+      var ok = parseInt(oBtn.getAttribute('data-choice'), 10) === it.b;
+      oBtn.classList.add(ok ? 'correct' : 'incorrect');
+      fbRow(r, ok, ok ? it.fb : it.hint);
+      if (ok) {
+        r.classList.add('done');
+        var bin = sw.querySelectorAll('.sort-bin')[it.b];
+        bin.appendChild(mk('div', 'sort-chip', it.t));
+        var n = sw.querySelectorAll('.widget-row.done').length;
+        sw.querySelector('.sort-tally').textContent = n + ' of ' + cfg.items.length + ' sorted';
+      }
+      return;
+    }
+    /* Order */
+    var pBtn = e.target.closest('.ow-order .order-pool button');
+    if (pBtn) {
+      var ow = pBtn.closest('.optima-widget');
+      var oc = JSON.parse(ow.getAttribute('data-config'));
+      var next = parseInt(ow.getAttribute('data-next'), 10);
+      var fb2 = ow.querySelector('.widget-feedback');
+      var i = parseInt(pBtn.getAttribute('data-i'), 10);
+      if (i === next) {
+        var li = mk('li');
+        var nb = mk('b', '', (next + 1) + '.');
+        li.appendChild(nb);
+        li.appendChild(document.createTextNode(oc.items[i]));
+        ow.querySelector('.order-list').appendChild(li);
+        pBtn.remove();
+        next++;
+        ow.setAttribute('data-next', next);
+        if (next === oc.items.length) {
+          fb2.textContent = oc.done;
+          fb2.classList.add('show');
+        } else {
+          fb2.classList.remove('show');
+          fb2.textContent = '';
+        }
+      } else {
+        pBtn.classList.add('nope');
+        setTimeout(function () { pBtn.classList.remove('nope'); }, 700);
+        fb2.textContent = oc.hint;
+        fb2.classList.add('show');
+      }
+      return;
+    }
+    /* Flip card */
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 </script>
 
 </body>
